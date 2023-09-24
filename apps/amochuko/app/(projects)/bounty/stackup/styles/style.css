@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'RobotoMon';
+    src: url('../assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* main */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    background-color: #eee;
+    min-width: 400px;
+    padding: 24px;
+    gap: 20px;
+}
+
+h1 {
+    margin-bottom: 24px;
+}
+
+button {
+    height: 34px;
+    background-color: #b4b3b3;
+    border: none;
+    font-size: 20px;
+    color: #1b1919;
+    font-weight: 600;
+}
+
+input[type='date'] {
+    height: 34px;
+}
+
+#result {
+    padding-top: 32px;
+}
