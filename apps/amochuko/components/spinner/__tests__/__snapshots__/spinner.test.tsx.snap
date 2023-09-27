@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner Snapshot should render a large blue spinner 1`] = `
+<div
+  className="icon icon-spin text-center large blue"
+/>
+`;

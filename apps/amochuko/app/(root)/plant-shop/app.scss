@@ -1,0 +1,23 @@
+:root {
+  --primay-color-plant: #2af598;
+  --secondary-color-plant: #009efd;
+  --tertiary-color-plant: #f9f9f9;
+}
+
+[class*='row'] {
+  margin-bottom: 3rem;
+}
+
+
+input:placeholder-shown {
+  background-color: red;
+}
+
+body {
+  color: var(--tertiary-color-plant);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

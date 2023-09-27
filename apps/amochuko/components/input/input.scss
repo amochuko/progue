@@ -1,0 +1,58 @@
+.input-wrapper {
+    display: flex;
+    gap: 4px;
+
+    &__top {
+        flex-direction: column;
+    }
+
+    &__right {
+        flex-direction: row-reverse;
+    }
+
+    &__bottom {
+        flex-direction: column-reverse;
+    }
+
+    &__left {
+        flex-direction: row;
+    }
+
+    & input {
+        padding-left: 12px;
+    }
+
+    & input:focus {
+        outline: 1px;
+    }
+
+    & input::placeholder {
+        color: var(--light-grey);
+    }
+
+    input[type='text'] {
+        min-width: 45px;
+        height: 45px;
+        padding: 16px 12px;
+    }
+
+    input[type='checkbox'] {
+        min-width: 50px;
+        height: 50px;
+    }
+
+    .input__label {
+        font-size: 16px;
+        font-weight: 700;
+        color: grey;
+    }
+
+    .input__span-error {
+        color: lightcoral;
+        font-size: 12px;
+    }
+
+    .input__size-sm {
+        /* margin: 8px; */
+    }
+}

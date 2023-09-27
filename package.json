@@ -8,14 +8,15 @@
   },
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "web3/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --paralell",
-    "dev:creative-tv": "turbo run dev --filter creative-tv",
     "lint": "turbo run lint",
     "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {

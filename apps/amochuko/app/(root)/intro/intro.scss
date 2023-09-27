@@ -1,0 +1,73 @@
+@import '../../global.scss';
+
+.intro {
+  background-color: #fff;
+  display: flex;
+  gap: 124px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &__left {
+    &__img {
+      position: relative;
+      top: calc(var(--headerHeight) + 40px);
+      display: flex;
+      width: 400px;
+      height: 400px;
+      justify-content: center;
+
+      img {
+        height: 70%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__right {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: calc(60px / 1.2);
+        margin: 2px 0;
+
+        @include tablet {}
+      }
+
+      h2 {
+        font-size: 35px;
+
+        @include tablet {
+          font-size: calc(35px / 1.2);
+        }
+      }
+
+      h3 {
+        font-size: calc(30px / 1.2);
+
+        span {
+          color: rgb(235, 65, 65);
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+
+      animation: arrowBlink 2s infinite;
+    }
+
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  @include tablet {}
+}

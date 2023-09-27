@@ -1,0 +1,16 @@
+.attribute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkBlue);
+
+    &--p {
+
+        color: white;
+    }
+
+    &--span {
+        color: hsl(226, 55%, 76%);
+    }
+}

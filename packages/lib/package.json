@@ -1,0 +1,16 @@
+{
+  "name": "@progue/lib",
+  "version": "1.0.0",
+  "description": "An lib that exports different packages",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.5.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

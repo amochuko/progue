@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import '../../../global.scss';
+
+.qr-code {
+    font-family: 'Outfit', serif, sans-serif, monospace;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: var(--bg-color);
+        padding: 80px 0 24px;
+    }
+
+
+}

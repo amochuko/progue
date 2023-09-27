@@ -1,0 +1,107 @@
+@import '../global.scss';
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+
+    @include mobile {
+      font-size: calc(50px / 1.2);
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card {
+      width: 250px;
+      height: 70%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px -8px #000;
+      transition: all 1s ease;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      @include mobile {
+        height: 50%;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.left,
+        &.right {
+          height: 25px;
+        }
+
+        img {
+          &.user {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin: 0 50px;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .testimony {
+        padding: 10px;
+        background-color: rgba(210, 207, 208, 0.145);
+        border-radius: 10px;
+
+        @include mobile {
+          font-size: 15px;
+          padding: 5px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          margin-bottom: 5px;
+
+          @include mobile {
+            font-size: 14;
+            // calc(20px / 1.2);
+          }
+        }
+
+        h4 {
+          color: rgb(121, 115, 115);
+          @include mobile {
+            font-size: 13;
+            // calc(20px / 1.2);
+          }
+        }
+      }
+    }
+  }
+}

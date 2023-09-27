@@ -1,0 +1,40 @@
+@import '../../global.scss';
+
+.card {
+    background: var(--white);
+    border-radius: var(--box-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    text-align: center;
+    line-height: 1.25;
+
+
+    &__size {
+        padding: 16px;
+
+        @include tablet {
+            margin: 50px auto 50px;
+        }
+    }
+
+    img {
+        border-radius: var(--box-radius);
+    }
+
+
+    &--heading {
+        font-size: 1.25em;
+        font-weight: 700;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+    &--para {
+        font-size: 1.05em;
+        font-weight: 400;
+        color: var(--grayish-blue);
+        padding: 14px 12px;
+    }
+}

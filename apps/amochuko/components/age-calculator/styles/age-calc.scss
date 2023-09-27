@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'RobotoMon';
+    src: url('https://fonts.google.com/specimen/Poppins');
+}
+
+:root {
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-light-red: hsl(0, 100%, 67%);
+    --off-white: hsl(0, 0%, 94%);
+    --off-black: hsl(0, 0%, 8%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smoke-grey: hsl(0, 1%, 44%);
+}
+
+.age-calc {
+    max-width: var(--desktop-width);
+    background-color: var(--light-grey);
+    height: var(--modalBodyHeight);
+    margin: auto;
+    font-family: Poppins;
+
+
+
+    &__card {
+
+
+        position: relative;
+        top: 80px;
+        max-width: calc(var(--mobile-width) - 60px);
+        background-color: #fff;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 20px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 100px;
+
+        &__divider {
+            position: relative;
+            top: 26px;
+            border: 1px solid hsl(0, 0%, 90%);
+            width: 90%;
+
+            &__icon {
+                position: absolute;
+                top: 145px;
+                border-radius: 50%;
+                background-color: var(--primary-purple);
+                width: 50px;
+                height: 50px;
+                background-image: url('../assets/images/icon-arrow.png');
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: 20px 22px;
+                object-fit: cover;
+            }
+        }
+
+        &img {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__form {
+            position: relative;
+            top: 20px;
+        }
+
+        &__label {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 14;
+
+            &-error {
+                color: var(--primary-light-red) !important;
+            }
+        }
+
+        &__input {
+            display: flex;
+            gap: 12px;
+
+            &-error {
+
+                border: 1px solid var(--primary-light-red) !important;
+            }
+
+            input {
+
+                border: 1px solid hsl(0, 0%, 86%);
+
+                & :focus {
+                    border: 1px solid var(--primary-purple);
+                }
+            }
+        }
+
+
+        &__output {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            font-weight: 800;
+            padding-left: 14px;
+            font-size: 42px;
+            font-style: italic;
+
+            &--span {
+                display: inline-flex;
+                color: var(--primary-purple);
+            }
+
+            &--paragraph {
+                color: var(--off-black);
+                line-height: 1.2;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:376px) {
+
+    .age-calc__card {
+        display: flex;
+        align-items: flex-start;
+        top: 20%;
+        max-width: calc(var(--mobile-width) + 150px);
+    }
+
+    .age-calc__card__divider__icon {
+        top: 122px;
+        right: 40px;
+        background-size: 28px 30px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .age-calc__card__output {
+        margin: 16px 0;
+        font-size: 60px;
+    }
+
+    .age-calc__card__input {
+        align-self: flex-start;
+        min-width: 350px;
+    }
+
+    .age-calc__card__input input {
+        max-width: 100px !important;
+    }
+
+    .age-calc__card__form {
+        padding-left: 24px;
+    }
+
+    .age-calc__card__divider {
+        top: 10px;
+    }
+}
