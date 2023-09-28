@@ -41,8 +41,6 @@
   },
   "packageManager": "yarn@1.22.19",
   "dependencies": {
-    "@orbisclub/orbis-sdk": "^0.4.70",
-    "dag-jose": "^4.0.0",
     "react-hook-form": "^7.45.2"
   }
 }
