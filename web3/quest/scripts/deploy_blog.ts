@@ -1,4 +1,5 @@
 const hre = require('hardhat');
+import fs from 'fs';
 
 async function main() {
   const Blog = await hre.ethers.getContractFactory('Blog');
@@ -6,11 +7,15 @@ async function main() {
 
   await blog.waitForDeployment();
 
-
-  //TODO: Write details to config.ts file
-
-  console.log('Blog deployed to: ', await blog.getAddress());
-  console.log('Deployer address: ', blog.runner.address);
+  // Write details to blogContract.ts file
+  fs.writeFileSync(
+    process.cwd() + '/utils/blogContract.ts',
+    `
+  export const contractAddress = '${await blog.getAddress()}'
+  export const ownerAddress = '${blog.runner.address}'
+  `,
+    { encoding: 'utf-8' }
+  );
 }
 
 main()
