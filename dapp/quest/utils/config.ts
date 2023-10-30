@@ -1,3 +1,4 @@
+
 const OPENAI = { API_KEY: process.env.OPENAI_API_KEY };
 
 const PINECONE = {

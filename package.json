@@ -4,12 +4,12 @@
   "private": true,
   "author": {
     "name": "Ochuko Awhe",
-    "email": ""
+    "email": "7204868+amochuko@users.noreply.github.com"
   },
   "workspaces": [
     "apps/*",
     "packages/*",
-    "web3/*"
+    "dapp/*"
   ],
   "scripts": {
     "build": "turbo run build",
