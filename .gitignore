@@ -1,7 +1,10 @@
 # Exclude
 next-app
-prototype
-blog 
+prototype/
+blog/
+python/
+alchemy/
+
 
 
 # Logs
