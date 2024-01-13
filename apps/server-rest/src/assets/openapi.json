@@ -1,0 +1,120 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Todo Service",
+    "version": "0.0.1"
+  },
+  "servers": [{ "url": "/" }],
+  "tags": [],
+  "paths": {
+    "/todos/{id}": {
+      "get": {},
+      "put": {
+        "summary": "updates a todo",
+        "operationId": "updateTodo",
+        "tags": ["Todos"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The id of the todo",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Todo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated todo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Todo"
+                }
+              }
+            }
+          }, 
+          "400":{
+            "description":"Bad request",
+            "content":{
+                "application/json":{
+                    "schema":{
+                        "$ref":"#/components/schemas/BadRequestError"
+                    }
+                }
+            }
+          }
+        }
+      },
+      "post": {},
+      "delete": {}
+    },
+    "/todos": {
+      "post": {},
+      "get": {}
+    }
+  },
+  "components": {
+    "schemas": {
+      "Todo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "assignee": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date'"
+          }
+        },
+        "required": ["name", "assignee", "dueDate"]
+      },
+      "BadRequestError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
