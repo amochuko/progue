@@ -9,7 +9,9 @@ typechain-types
 # Hardhat files
 cache
 artifacts
-
+contracts/demo
+test/demo
+scripts/demo
 
 # dependencies
 /node_modules
